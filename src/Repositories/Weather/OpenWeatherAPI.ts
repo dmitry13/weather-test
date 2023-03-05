@@ -12,10 +12,10 @@ export default function OpenWeatherAPI(apiKey: string | undefined): Weather {
         title: weatherData.name,
         // Capitalize first letter
         description: description.charAt(0).toUpperCase() + description.slice(1),
-        temp: Math.ceil(weatherData.main.temp),
-        tempMax: Math.ceil(weatherData.main.temp_max),
-        tempMin: Math.ceil(weatherData.main.temp_min),
-        feelsLike: Math.ceil(weatherData.main.feels_like),
+        temp: Math.round(weatherData.main.temp),
+        tempMax: Math.round(weatherData.main.temp_max),
+        tempMin: Math.round(weatherData.main.temp_min),
+        feelsLike: Math.round(weatherData.main.feels_like),
         pressure: weatherData.main.pressure,
         humidity: weatherData.main.humidity,
         icon: `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`
