@@ -1,3 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-slate-800;
+  }
+}
+
+@layer components {
+  .place-select-container {
+    text-align: left;
+  }
+
+  .place-select-container .place-select__control {
+    @apply bg-white dark:bg-slate-900 border-2 border-slate-500 dark:border-slate-900 hover:border-slate-400 dark:hover:border-slate-700;
+  }
+
+  .place-select-container .place-select__control--is-focused {
+    @apply border-slate-700 hover:border-slate-700 dark:border-slate-400 dark:hover:border-slate-400 shadow-none;
+  }
+
+  .place-select-container .place-select__menu {
+    @apply bg-slate-300 dark:bg-slate-900 border-2 border-slate-500 dark:border-slate-600;
+  }
+
+  .place-select-container .place-select__option {
+    @apply text-slate-600 dark:text-slate-200 bg-slate-300 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-900;
+  }
+  .place-select-container .place-select__option--is-focused {
+    @apply bg-slate-200 dark:bg-slate-700;
+  }
+
+  .place-select-container .place-select__indicator-separator {
+    @apply bg-slate-400;
+  }
+
+  .place-select-container .place-select__input-container,
+  .place-select-container .place-select__placeholder,
+  .place-select-container .place-select__single-value {
+    @apply text-slate-600 dark:text-slate-200;
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
