@@ -17,11 +17,6 @@ function Weather({
   title,
   description,
   temp,
-  tempMax,
-  tempMin,
-  feelsLike,
-  pressure,
-  humidity,
   icon
 }: WeatherProps
   ) {
@@ -29,7 +24,7 @@ function Weather({
     <div className="max-w-md p-8 mx-auto rounded-lg dark:bg-slate-900 dark:text-gray-100 relative">
       <div className="flex justify-between space-x-8">
         <div className="flex flex-col items-center">
-          <img width="100px" src={icon} />
+          <img width="100px" src={icon} alt="weather icon"/>
           <h1 className="text-xl font-semibold">{ title }</h1>
         </div>
         <div className="flex justify-between space-x-8">

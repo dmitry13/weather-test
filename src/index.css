@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 @layer base {
-  body {
+  html {
     @apply bg-white dark:bg-slate-800;
   }
 }
 
 @layer components {
   .place-select-container {
-    text-align: left;
+    @apply text-left;
   }
 
   .place-select-container .place-select__control {
@@ -28,7 +28,12 @@
   .place-select-container .place-select__option {
     @apply text-slate-600 dark:text-slate-200 bg-slate-300 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-900;
   }
-  .place-select-container .place-select__option--is-focused {
+  .place-select-container .place-select__option--is-focused,
+  .place-select-container .place-select__option--is-focused:hover {
+    @apply bg-slate-200 dark:bg-slate-700;
+  }
+
+   {
     @apply bg-slate-200 dark:bg-slate-700;
   }
 

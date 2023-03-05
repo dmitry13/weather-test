@@ -1,4 +1,4 @@
-import Weather from './'
+import Weather from './';
 
 export default function OpenWeatherAPI(apiKey: string | undefined): Weather {
   if (!apiKey) throw new Error('[OpenWeatherAPI] No API key specified');
