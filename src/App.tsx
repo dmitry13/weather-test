@@ -61,10 +61,14 @@ function App() {
         />
       </div>
       {isLoading && !weatherData && <Spinner />}
-      {weatherData && <WeatherWidget
-        isLoading={isLoading}
-        {...weatherData}
-      />}
+      {weatherData &&
+        <div className="pl-3 pr-3">
+          <WeatherWidget
+            isLoading={isLoading}
+            {...weatherData}
+          />
+        </div>
+      }
   </>)
 
   return (
